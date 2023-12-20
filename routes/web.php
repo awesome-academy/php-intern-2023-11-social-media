@@ -26,7 +26,11 @@ Route::get('/dashboard', [DashboardController::class, 'dashboard'])
 require __DIR__ . '/auth.php';
 
 Route::get('users', [UserController::class, 'index'])->name('users.index');
-Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+Route::get('users/create', [UserController::class, 'create'])
+    ->name('users.create')
+    ->middleware([
+        'admin',
+    ]);
 Route::get('users/{user}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::get('users/{user}', [UserController::class, 'show'])->name('users.show');
 Route::post('users', [UserController::class, 'store'])->name('users.store');
