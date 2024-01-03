@@ -12,6 +12,18 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+            <div class="mt-4">
+                <x-label for="post" :value="__('Post')" />
+
+                <x-input id="post" class="block mt-1 w-full"
+                    type="text"
+                    name="post"
+                    required autocomplete="post" />
+
+            </div>
+            <x-button class="mt-4">
+                {{ __('+') }}
+            </x-button>
         </div>
     </div>
 </x-app-layout>
