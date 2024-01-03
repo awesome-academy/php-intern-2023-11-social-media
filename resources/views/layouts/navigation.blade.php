@@ -15,6 +15,12 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('locale', ['lang' => 'en'])">
+                        {{ __('EN') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('locale', ['lang' => 'vi'])">
+                        {{ __('VI') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -41,7 +47,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                {{ __('Logout') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -83,7 +89,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        {{ __('Logout') }}
                     </x-responsive-nav-link>
                 </form>
             </div>
