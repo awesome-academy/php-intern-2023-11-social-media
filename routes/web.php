@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +39,5 @@ Route::put('users/{user}', [UserController::class, 'update'])->name('users.updat
 Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
 Route::resource('/posts', PostController::class);
+
+Route::get('language/{lang}', [LanguageController::class, 'changeLanguage'])->name('locale');
