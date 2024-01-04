@@ -1,0 +1,40 @@
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: #e5e7eb;
+    text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+    border-color: #e5e7eb;
+    border-style: solid;
+    border-width: 0;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    vertical-align: center;
+    border-color: #e5e7eb;
+}
+
+.table > :not(cation) > * > * {
+    padding: 0.5rem 0.5rem;
+    border-bottom-width: 1px;
+}
+
+.table > tbody {
+    vertical-align: inherit;
+}
+
+.table > thead {
+    vertical-align: bottom;
+}
