@@ -20,6 +20,7 @@
                     <th class="text-gray-900" scope="col">#</th>
                     <th class="text-gray-900" scope="col">Name</th>
                     <th class="text-gray-900" scope="col">Username</th>
+                    <th class="text-gray-900" scope="col">Posts</th>
                     <th class="text-gray-900" scope="col">Action</th>
                 </thead>
                 <tbody>
@@ -28,6 +29,12 @@
                             <th class="text-gray-900 text-center" scope="row">{{ ++$index }}</th>
                             <td class="text-gray-900 text-center">{{ $user->name }}</td>
                             <td class="text-gray-900 text-center">{{ $user->username }}</td>
+                            <td class="text-gray-900 text-center">
+                                @foreach ($user->posts as $post)
+                                    {{ $post->content }}
+                                    <br>
+                                @endforeach
+                            </td>
                             <td class="text-gray-900 text-center">
                                 <a href="{{ route('users.edit', ['user' => $user->id]) }}">
                                     <x-button class="mt-4">
