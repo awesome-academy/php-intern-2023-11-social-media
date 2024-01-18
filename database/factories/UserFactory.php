@@ -21,6 +21,8 @@ class UserFactory extends Factory
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
             'is_active' => true,
+            'gender' => 0,
+            'dob' => $this->faker->date($format = 'Y-m-d', $max = '-18 years', $min = '-80 years'),
         ];
     }
 
