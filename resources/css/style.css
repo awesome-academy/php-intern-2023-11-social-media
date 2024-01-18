@@ -1,0 +1,101 @@
+/* nav */
+.nav__search {
+    padding: 5px 15px;
+    background: #3a3b3c;
+    border-radius: 20px;
+    color: #acafb4;
+}
+
+.header__search input {
+    background: #3a3b3c;
+}
+
+.nav__btn {
+    background-color: #f0f2f5;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.nav__btn:hover {
+    filter: brightness(95%);
+}
+
+/* dashboard */
+
+.app__container {
+    overflow-y: hidden;
+}
+
+.dashboard__left {
+    flex: 1;
+    margin-right: 32px;
+}
+
+.dashboard__right {
+    flex: 2;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.create__post-btn {
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    flex: 1;
+    transition: all .1s ease;
+}
+
+.create__post-btn:hover {
+    filter: brightness(95%);
+}
+
+.dashboard__left-btn:hover {
+    background-color: #f0f2f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dashboard__left-btn i {
+    font-size: 24px;
+    width: 40px;
+}
+
+.bar__dashboard {
+    display: none;
+    cursor: pointer;
+}
+
+.bar__dashboard:hover {
+    background-color: #f0f2f5;
+}
+
+#bar__dashboard-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.bar__dashboard-list {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    animation: slideInFromLeft 0.2s ease-in-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        /* opacity: 0; */
+    }
+    100% {
+        transform: translateX(0);
+        /* opacity: 1; */
+    }
+}

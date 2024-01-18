@@ -1,0 +1,13 @@
+@media (max-width: 762px) {
+    .dashboard__left {
+        display: none;
+    }
+
+    .bar__dashboard {
+        display: inline-block;
+    }
+
+    #bar__dashboard-modal.active {
+        display: block;
+    }
+}

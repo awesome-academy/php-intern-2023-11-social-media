@@ -1,0 +1,46 @@
+.circle__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.circle__btn {
+    border-radius: 50%;
+    padding: 3px 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.circle__btn:hover {
+    background-color: #f0f2f5;
+}
+
+.post__author:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.like__comment:hover div {
+    text-decoration: underline;
+}
+
+.like-btn,
+.comment-btn {
+    flex: 1;
+    border-radius: 10px;
+    transition: all .05s ease;
+}
+
+.like-btn:hover,
+.comment-btn:hover {
+    background-color: #f0f2f5;
+}
+
+.like-btn.active {
+    color: #0866ff;
+}
+
+.like-btn:active,
+.comment-btn:active {
+    scale: 0.96;
+}
