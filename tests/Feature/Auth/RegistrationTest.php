@@ -3,6 +3,7 @@
 namespace Tests\Feature\Auth;
 
 use App\Providers\RouteServiceProvider;
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -25,6 +26,8 @@ class RegistrationTest extends TestCase
             'email' => 'test@example.com',
             'password' => 'password',
             'password_confirmation' => 'password',
+            'dob' => Carbon::createFromFormat('d/m/Y', '01/01/2002')->toDateString(),
+            'gender' => 'male',
         ]);
 
         $this->assertAuthenticated();
