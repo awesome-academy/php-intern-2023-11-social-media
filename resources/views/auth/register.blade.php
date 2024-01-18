@@ -24,6 +24,20 @@
                 <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
             </div>
 
+            <div class="mt-4">
+                <x-label for="dob" :value="__('Date of birth')" />
+
+                <x-input id="dob" class="block mt-1 w-full" type="date" name="dob" :value="old('dob')" required />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="gender" :value="__('Gender')" />
+                <select id="gender" name="gender" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <option value='male'>{{ __('Male') }}</option>
+                    <option value='female'>{{ __('Female') }}</option>
+                </select>
+            </div>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
