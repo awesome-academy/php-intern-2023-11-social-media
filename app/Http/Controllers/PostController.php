@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -35,7 +36,15 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'content' => ['required', 'string'],
+        ]);
+
+        $post = new Post();
+        $post->user_id = Auth::user()->id;
+        $post->content = $request->content;
+        $post->status = $request->status === 'public' ? 0 : 1;
+        $post->save();
     }
 
     /**
@@ -69,7 +78,13 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'content' => ['required', 'string'],
+        ]);
+
+        $post->content = $request->content;
+        $post->status = $request->status === 'public' ? 0 : 1;
+        $post->save();
     }
 
     /**
@@ -80,6 +95,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
     }
 }
