@@ -12,8 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/handleUI.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require('tailwindcss'),
         require('autoprefixer'),
     ])
-    .sass('resources/scss/custom.scss', 'public/css');
+    .sass('resources/scss/custom.scss', 'public/css')
+    .postCss('resources/css/style.css', 'public/css')
+    .postCss('resources/css/base.css', 'public/css')
+    .postCss('resources/css/responsive.css', 'public/css');
